@@ -1,0 +1,32 @@
+.greating-card {
+  width: 500px;
+  height: 350px;
+  margin: 0 auto;
+  background-color: var(--baby-purple);
+  border-radius: 44px;
+}
+
+.greating-img {
+  margin: 50px auto;
+  display: block;
+}
+
+.greating-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  background: none;
+  border-radius: 36px;
+  border: 2px solid #fff;
+  letter-spacing: 1px;
+}
+
+.greating-btn:hover {
+  background: rgba(255, 255, 255, 0.096);
+}
+
+.greating-btn:active {
+  background: rgba(255, 255, 255, 0.363);
+}

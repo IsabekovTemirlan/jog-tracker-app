@@ -1,0 +1,12 @@
+.jogs-card {
+  width: 250px;
+}
+.jogs-card-date {
+  color: var(--text-secondary);
+ margin-bottom: .5rem;
+}
+.jogs-card-text {
+  margin: 0;
+  color: var(--text-secondary);
+  font-weight: 500;
+}

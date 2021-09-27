@@ -1,0 +1,1 @@
+export {JogsPage} from './jogs';

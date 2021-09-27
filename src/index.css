@@ -12,3 +12,24 @@ code {
     monospace;
 }
 
+:root {
+  --apple-green: #7ed321;
+  --baby-purple: #e990f9;
+  --white: #eaeaea;
+  --text-secondary: #767676;
+}
+
+.f-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.m-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.spacer {
+  margin: 1rem;
+}
