@@ -4,9 +4,10 @@ import jogIcon from '../../assets/icons/icon.svg'
 
 export const JogCard = () => {
   return (
-    <div className="jogs-card m-center">
-      <div className="f-center">
+    <div className="jogs-card">
+      <div className="jogs-card-wrap f-center">
         <img src={jogIcon} />
+        <span className="spacer"></span>
         <div className="jogs-card-body">
           <p className="jogs-card-date">
             20.12.2021

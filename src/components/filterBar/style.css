@@ -2,23 +2,34 @@
   background-color: var(--white);
   text-align: center;
 }
+
 .filter-bar-form {
-  padding: 1rem;
+  padding: 15px;
 }
 
 .filter-bar-label {
   color: var(--text-secondary);
   font-size: 14px;
   font-weight: 500;
-  
 }
 
 .filter-bar-input {
   margin-left: 1rem;
-  padding: .3rem;
+  padding: .1rem .5rem;
   color: var(--text-secondary);
   font-size: 18px;
   border-radius: 1rem;
   border: 1px solid var(--text-secondary);
   outline: none;
+}
+
+@media only screen and (max-width: 620px) {
+  .filter-bar-input {
+    width: 100px;
+    margin-top: 10px;
+  }
+
+  .filter-bar-label {
+    margin-bottom: .5rem;
+  }
 }

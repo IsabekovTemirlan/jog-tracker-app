@@ -1,32 +1,35 @@
 .greating-card {
   width: 500px;
-  height: 350px;
-  margin: 0 auto;
+  margin: 20vh auto;
+  padding: 70px 0 40px 0;
   background-color: var(--baby-purple);
   border-radius: 44px;
 }
 
 .greating-img {
-  margin: 50px auto;
   display: block;
+  height: 160px;
+  width: 160px;
+  margin: 0 auto 50px 0;
+  display: block;
+  background-image: url(../../assets/icons/bear-face.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.greating-btn {
-  padding: 10px 20px;
-  cursor: pointer;
-  color: #fff;
-  font-size: 18px;
-  font-family: 'Roboto', sans-serif;
-  background: none;
-  border-radius: 36px;
-  border: 2px solid #fff;
-  letter-spacing: 1px;
-}
 
-.greating-btn:hover {
-  background: rgba(255, 255, 255, 0.096);
-}
+@media only screen and (max-width: 620px) {
+  .greating-card {
+    background-color: var(--white-two);
+    width: auto;
+  }
 
-.greating-btn:active {
-  background: rgba(255, 255, 255, 0.363);
+  .greating-img {
+    background-image: url(../../assets/icons/mobile-bearFace.png);
+  }
+
+  .mobile-greating-btn {
+    color: var(--baby-purple) !important;
+    border-color: var(--baby-purple) !important;
+  }
 }

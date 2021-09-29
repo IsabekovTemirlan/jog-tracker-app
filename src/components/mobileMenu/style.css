@@ -1,0 +1,40 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--white-two);
+}
+
+.menu-top {
+  margin: 1rem 2rem;
+}
+
+.menu-close {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.menu-list {
+  margin-top: 150px;
+  list-style: none;
+  text-align: center;
+}
+
+.menu-item {
+  margin: 1rem 0;
+  font-size: 20pt;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.menu-item a {
+  color: var(--menu-item);
+}
+
+.menu-item-active a {
+  color: var(--apple-green);
+}

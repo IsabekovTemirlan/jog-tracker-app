@@ -1,3 +1,42 @@
-.jogs-page {
-  
+.jogs-btn {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.jogs-btn:hover {
+  background: rgba(48, 48, 48, 0.089);
+  border-radius: 50%;
+}
+
+.jogs-btn:active {
+  background: rgba(0, 0, 0, 0.137);
+}
+
+.empty-content {
+  width: 250px;
+  text-align: center;
+}
+.empty-content-body {
+  margin: 120px 0;
+}
+
+@media only screen and (max-width: 620px) {
+  .jogs-page {
+    padding: 0 10%;
+  }
+
+  .jogs-btn {
+    width: 45px;
+    height: 45px;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .sad-icon {
+    width: 85px;
+    height: 85px;
+  }
 }

@@ -1,16 +1,14 @@
 import './App.css'
-import {Navbar, Greating, FilterBar} from './components'
-import {JogsPage} from './pages'
+import { Navbar, AppRouter, FilterBar } from './components'
 
-function App() {
+const App = () => {
 
   return (
     <div className="App">
       <Navbar />
-      <JogsPage />
-
-      <div className="content f-center">
-        <Greating />
+      <div className="content">
+        {/* <FilterBar /> */}
+        <AppRouter />
       </div>
     </div>
   )

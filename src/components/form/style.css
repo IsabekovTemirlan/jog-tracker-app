@@ -1,0 +1,29 @@
+.add-form {
+  max-width: 500px;
+  position: relative;
+  margin: 15vh auto;
+  border-radius: 45px;
+  background-color: var(--apple-green);
+}
+
+.form-field-wrap {
+  margin: 50px auto 40px auto;
+}
+
+.form-close {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 620px) {
+  .form-field-wrap {
+    padding: 0 2rem;
+  }
+
+  .form-close {
+    width: 18px;
+    height: 18px;
+  }
+}
