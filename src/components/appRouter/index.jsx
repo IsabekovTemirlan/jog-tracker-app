@@ -1,11 +1,14 @@
+import { useEffect } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
+import { getToken } from '../../api'
+import { useAuth } from '../../hooks/useAuth'
 import { privateRoutes, publicRoutes, routeNames } from "../../router"
 
 export const AppRouter = () => {
-  const isAuth = true //useSelector(state => state.auth);
+  const {token} = useAuth()
 
   return (
-    isAuth ?
+    token ?
       <Switch>
         {privateRoutes.map(route =>
           <Route path={route.path}

@@ -9,10 +9,12 @@ import filterActiveIcon from '../../assets/icons/filter-active.svg'
 import filterIcon from '../../assets/icons/filter.svg'
 import menuIcon from '../../assets/icons/menu.png'
 import './style.css'
+import { useAuth } from '../../hooks/useAuth'
 
 export const Navbar = () => {
   const { filterBarVisible, mobileMenuVisible } = useSelector(state => state.app);
   const { showFilterBar, hideFilterBar, showMobileMenu } = useActions();
+  const { token } = useAuth()
   const { pathname } = useLocation();
 
   return (
@@ -21,7 +23,7 @@ export const Navbar = () => {
         <div className="logo">
           <Link to="/jogs"><img src={logo} /> </Link>
         </div>
-        <ul className="nav-list f-center">
+        {token ? <ul className="nav-list f-center">
           {routes.map(route => <li key={route.path} className={`nav-item ${pathname === route.path ? 'active' : ''}`}>
             <Link to={route.path}>{route.title}</Link></li>
           )}
@@ -31,9 +33,8 @@ export const Navbar = () => {
               : <img onClick={showFilterBar} src={filterIcon} />
             }
           </div>
-
           <img className="nav-icon mobile-menu-icon" onClick={showMobileMenu} src={menuIcon} />
-        </ul>
+        </ul> : ''}
       </div>
       {mobileMenuVisible && <MobileMenu />}
     </>
