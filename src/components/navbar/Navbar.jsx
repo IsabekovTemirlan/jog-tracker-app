@@ -1,27 +1,41 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { useLocation } from 'react-router-dom'
 import { MobileMenu } from '..'
+import { useActions } from '../../hooks/useAction'
+import { routes } from '../../config/index'
 import logo from '../../assets/icons/logo.svg'
-import filterIcon from '../../assets/icons/filter-active.svg'
+import filterActiveIcon from '../../assets/icons/filter-active.svg'
+import filterIcon from '../../assets/icons/filter.svg'
 import menuIcon from '../../assets/icons/menu.png'
 import './style.css'
 
 export const Navbar = () => {
+  const { filterBarVisible, mobileMenuVisible } = useSelector(state => state.app);
+  const { showFilterBar, hideFilterBar, showMobileMenu } = useActions();
+  const { pathname } = useLocation();
+
   return (
     <>
       <div className="navbar f-between">
         <div className="logo">
-          <Link to="/jogs"><img src={logo}/> </Link>
+          <Link to="/jogs"><img src={logo} /> </Link>
         </div>
         <ul className="nav-list f-center">
-          <li className="nav-item active"><Link to="/jogs">Jogs</Link></li>
-          <li className="nav-item"><Link to="/info">Info</Link></li>
-          <li className="nav-item"><Link to="/contact-us">Contact Us</Link></li>
-          <img className="nav-icon" src={filterIcon}/>
-          <img className="nav-icon mobile-menu-icon" src={menuIcon}/>
+          {routes.map(route => <li key={route.path} className={`nav-item ${pathname === route.path ? 'active' : ''}`}>
+            <Link to={route.path}>{route.title}</Link></li>
+          )}
+          <div className="nav-icons f-center">
+            {filterBarVisible
+              ? <img onClick={hideFilterBar} src={filterActiveIcon} />
+              : <img onClick={showFilterBar} src={filterIcon} />
+            }
+          </div>
+
+          <img className="nav-icon mobile-menu-icon" onClick={showMobileMenu} src={menuIcon} />
         </ul>
       </div>
-      {/* <MobileMenu /> */}
+      {mobileMenuVisible && <MobileMenu />}
     </>
   )
 }

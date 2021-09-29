@@ -16,24 +16,27 @@
   font-size: 16px;
   text-transform: uppercase;
   cursor: pointer;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-item a {
   text-decoration: none;
-  color: #fff;
+  color: var(--white-two);
 }
 
-.nav-icon {
+.nav-icons {
   margin-left: 1.5rem;
+  width: 35px;
   cursor: pointer;
 }
 
 .active {
-  border-bottom: 2px solid #fff;
+  border-color: var(--white-two);
 }
 
 .mobile-menu-icon {
   display: none;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 620px) {
@@ -52,5 +55,9 @@
 
   .nav-item {
     display: none;
+  }
+
+  .nav-icons {
+    margin-right: 1.5rem;
   }
 }

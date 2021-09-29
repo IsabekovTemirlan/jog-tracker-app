@@ -9,7 +9,7 @@
 }
 
 .menu-top {
-  margin: 1rem 2rem;
+  padding: 20px;
 }
 
 .menu-close {
@@ -19,6 +19,7 @@
 }
 
 .menu-list {
+  padding: 0;
   margin-top: 150px;
   list-style: none;
   text-align: center;
