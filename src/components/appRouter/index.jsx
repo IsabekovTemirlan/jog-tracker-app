@@ -1,14 +1,12 @@
-import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import { Switch, Route, Redirect } from 'react-router-dom'
-import { getToken } from '../../api'
-import { useAuth } from '../../hooks/useAuth'
 import { privateRoutes, publicRoutes, routeNames } from "../../router"
 
 export const AppRouter = () => {
-  const {token} = useAuth()
+  const { appReady } = useSelector(state => state.app)
 
   return (
-    token ?
+    (appReady) ?
       <Switch>
         {privateRoutes.map(route =>
           <Route path={route.path}

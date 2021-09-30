@@ -20,6 +20,11 @@ code {
   --text-secondary: #767676;
   --menu-item: #464347;
 }
+
+body::-webkit-scrollbar {
+  display: none !important;
+}
+
 * a {
   text-decoration: none;
 }

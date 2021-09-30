@@ -2,24 +2,24 @@
 import './style.css'
 import jogIcon from '../../assets/icons/icon.svg'
 
-export const JogCard = () => {
+export const JogCard = ({date, distance, time, speed, open}) => {
   return (
-    <div className="jogs-card">
+    <div className="jogs-card" onClick={open}>
       <div className="jogs-card-wrap f-center">
         <img src={jogIcon} />
         <span className="spacer"></span>
         <div className="jogs-card-body">
           <p className="jogs-card-date">
-            20.12.2021
+            {date}
           </p>
           <p className="jogs-card-text">
-            <span>Speed</span>: 15
+            <span>Speed</span>: {speed} km/h
           </p>
           <p className="jogs-card-text">
-            <span>Distance</span>: 10 km
+            <span>Distance</span>: {distance} km
           </p>
           <p className="jogs-card-text">
-            <span>Time</span>: 60 m
+            <span>Time</span>: {time} m
           </p>
         </div>
       </div>

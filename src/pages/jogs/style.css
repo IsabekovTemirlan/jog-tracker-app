@@ -24,10 +24,6 @@
 }
 
 @media only screen and (max-width: 620px) {
-  .jogs-page {
-    padding: 0 10%;
-  }
-
   .jogs-btn {
     width: 45px;
     height: 45px;

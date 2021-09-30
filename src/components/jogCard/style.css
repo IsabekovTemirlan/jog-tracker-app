@@ -1,5 +1,6 @@
 .jogs-card-wrap {
   margin: 50px auto;
+  cursor: pointer;
 }
 
 .jogs-card-date {

@@ -1,4 +1,3 @@
-import axios from 'axios'
 export const API_URL = 'https://jogtracker.herokuapp.com/api/v1/auth/uuidLogin'
 
 export const request = async (method, body, token = '') => {

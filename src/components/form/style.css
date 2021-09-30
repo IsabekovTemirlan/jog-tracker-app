@@ -1,3 +1,14 @@
+.add-form-backdrop {
+  position: absolute;
+  padding: 0 2rem;
+  top: 111px;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--white-two);
+}
+
 .add-form {
   max-width: 500px;
   position: relative;
@@ -20,6 +31,10 @@
 @media only screen and (max-width: 620px) {
   .form-field-wrap {
     padding: 0 2rem;
+  }
+
+  .add-form {
+    margin: 12vh auto;
   }
 
   .form-close {

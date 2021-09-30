@@ -1,6 +1,8 @@
 .filter-bar {
   background-color: var(--white);
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .filter-bar-form {
