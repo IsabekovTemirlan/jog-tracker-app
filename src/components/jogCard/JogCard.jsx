@@ -4,7 +4,7 @@ import jogIcon from '../../assets/icons/icon.svg'
 
 export const JogCard = ({date, distance, time, speed, open}) => {
   return (
-    <div className="jogs-card" onClick={open}>
+    <div className="jogs-card page-enter" onClick={open}>
       <div className="jogs-card-wrap f-center">
         <img src={jogIcon} />
         <span className="spacer"></span>

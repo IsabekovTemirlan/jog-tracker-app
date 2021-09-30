@@ -11,7 +11,8 @@ import menuIcon from '../../assets/icons/menu.png'
 import './style.css'
 
 export const Navbar = () => {
-  const { filterBarVisible, mobileMenuVisible, appReady } = useSelector(state => state.app);
+  const { mobileMenuVisible, appReady } = useSelector(state => state.app);
+  const { filterBarVisible } = useSelector(state => state.jogs)
   const { showFilterBar, hideFilterBar, showMobileMenu } = useActions();
   const { pathname } = useLocation();
 

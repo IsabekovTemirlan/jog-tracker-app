@@ -6,17 +6,23 @@ export const FilterBar = () => {
   const { filterJogs } = useActions()
   const [filter, setFilter] = useState({ dateFrom: '', dateTo: '' })
 
+  // const onChangeHandler = async (e) => {
+  //   const { id, value } = e.target
+  //   setFilter({ ...filter, [id]: value })
+  //   if (filter.dateFrom && id === 'dateTo') {
+  //     filterJogs({...filter, dateTo: value})
+  //   }
+  // }
+
   const onChangeHandler = (e) => {
     const { id, value } = e.target
-    setFilter({ ...filter, [id]: value })
-  }
-
-  if (filter.dateFrom && filter.dateTo) {
-    filterJogs(filter)
+    const newValue = { ...filter, [id]: value }
+    filterJogs(newValue)
+    setFilter(newValue)
   }
 
   return (
-    <div className="filter-bar">
+    <div className="filter-bar page-enter">
       <form className="filter-bar-form f-center">
         <div className="filter-bar-control">
           <label className="filter-bar-label" htmlFor="dateFrom">Date From</label>

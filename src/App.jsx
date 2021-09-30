@@ -5,11 +5,12 @@ import { useEffect } from 'react';
 import { useActions } from './hooks/useAction';
 
 const App = () => {
-  const { filterBarVisible, appReady } = useSelector(state => state.app);
+  const { appReady } = useSelector(state => state.app);
+  const { filterBarVisible } = useSelector(state => state.jogs);
   const { initApp } = useActions()
 
   useEffect(() => {
-    if (!appReady) initApp()
+    if (!appReady) initApp(true)
   }, [])
 
   return (

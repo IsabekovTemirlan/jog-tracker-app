@@ -45,7 +45,26 @@ body::-webkit-scrollbar {
   display: block;
   margin: 0 auto;
 }
+.t-center {
+  margin-top: 50px;
+  text-align: center;
+}
 
 .spacer {
   margin: 1rem;
+}
+
+.page-enter {
+  animation: file-enter .5s;
+}
+
+@keyframes file-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

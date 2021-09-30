@@ -44,7 +44,7 @@ export const Form = ({ form, setForm }) => {
 
   return (
     <div className="add-form-backdrop">
-      <form className="add-form f-center">
+      <form className="add-form f-center page-enter">
         <img src={closeIcon} className="form-close" onClick={closeHandler} />
         <div className="form-field-wrap">
           <Input id="distance" label="Distance" type="number" value={form.data.distance || ''} handler={onChangeHandler} />
