@@ -1,7 +1,7 @@
 import { Button, Input } from '..'
 import closeIcon from '../../assets/icons/cancel.svg'
+import { initialJogData } from '../../config'
 import { useActions } from '../../hooks/useAction'
-import { initialJogData } from '../../pages/jogs/JgosPage'
 import { calcSpeed, validateFields } from '../../utils'
 import './style.css'
 

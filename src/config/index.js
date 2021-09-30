@@ -3,3 +3,10 @@ export const routes = [
   { path: '/info', title: 'Info' },
   { path: '/contact-us', title: 'Contact Us' }
 ]
+
+export const initialJogData = {
+  time: '',
+  distance: '',
+  date: '',
+  speed: ''
+}
